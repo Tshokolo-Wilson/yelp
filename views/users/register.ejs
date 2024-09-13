@@ -1,0 +1,34 @@
+<% layout('layouts/boilerplate') %>
+
+<style>
+    body{
+        background-color: gray;
+    }
+</style>
+
+<div class="container d-flex justify-content-center align-items-center mt-5">
+    <div class="row">
+    <div class="col-md-6 offset-md-3 ">
+      <div class="card shadow">
+        <img src="https://images.stockcake.com/public/9/8/f/98f5207e-8fa3-4a45-8b8b-309174ca1051_large/family-nature-hike-stockcake.jpg">
+        <div class="card-body">
+      <form action="/register" method="post" class="validated-form">
+    <div class="mb-3">
+        <label class="form-label" for="username">Username</label>
+        <input type="text" class="form-control" id="username" name="username" required autofocuss>
+    </div>
+    <div class="mb-3">
+        <label class="form-label" for="email">Email</label>
+        <input type="email" class="form-control" id="email" name="email" required>
+    </div>
+    <div class="mb-3">
+        <label class="form-label" for="password">Password</label>
+        <input type="password" class="form-control" id="password" name="password" required>
+    </div>
+ <button class="btn btn-success">Register</button>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
