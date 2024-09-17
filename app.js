@@ -4,7 +4,7 @@ if(process.env.NODE_ENV !== "production"){
 const  express = require('express');
 const path = require ('path');
 const mongoose = require ('mongoose');
-const mongoStore = require('connect-mongo')
+const mongoStore = require('connect-mongo');
 const ejsMate = require('ejs-mate');
 const session =require('express-session');
 const flash = require('connect-flash');
@@ -20,15 +20,19 @@ const reviewRoutes = require('./routes/reviews.js');
 const mongoSanitize = require ('express-mongo-sanitize');
 const  helmet  = require('helmet');
 const MongoStore = require('connect-mongo');
+const e = require('connect-flash');
 
-const dbUrl = 'mongodb://0.0.0.0:27017/yelp-camp';
+const dbUrl =process.env.DB_URL  || 'mongodb://0.0.0.0:27017/yelp-camp';
 
-mongoose.connect(dbUrl, {
+
+
+  mongoose.connect(dbUrl, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
 
- 
+
+
   const db = mongoose.connection;
     db.on("error", console.error.bind(console, "connection error:"));
     db.once("open", () => {
