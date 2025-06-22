@@ -22,7 +22,7 @@ const  helmet  = require('helmet');
 const MongoStore = require('connect-mongo');
 const e = require('connect-flash');
 
-const dbUrl =process.env.DB_URL  || 'mongodb://0.0.0.0:27017/yelp-camp';
+const dbUrl =  'mongodb://0.0.0.0:27017/yelp-camp';
 
 
 
